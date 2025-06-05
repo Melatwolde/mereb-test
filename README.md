@@ -2,7 +2,6 @@
 
 This project consists of a **frontend** (React/Next.js) and a **backend** (Node.js/Express) for uploading CSV files, processing them, and downloading the results.
 
----
 
 ## How to Run the App
 
@@ -42,12 +41,13 @@ For each row, it:
   The processed file is saved with a unique ID and can be downloaded via a link.
 
 **Memory Efficiency Strategy**
-Streaming: It uses fs.createReadStream and csv-parser to process the CSV file as a stream, which is memory efficient and suitable for large files.
+*Streaming*: It uses fs.createReadStream and csv-parser to process the CSV file as a stream, which is memory efficient and suitable for large files.
 
-Hash Map: Sales are accumulated in a hash map (salesByCity), which only stores unique city names and their totals, minimizing memory usage.
+*Hash Map*: Sales are accumulated in a hash map (salesByCity), which only stores unique city names and their totals, minimizing memory usage.
 
-Temporary Files: The uploaded file is deleted after processing to save disk space.
+*Temporary Files*: The uploaded file is deleted after processing to save disk space.
 
 Estimated Big O Complexity
 *Time Complexity*: O(n), where n is the number of rows in the CSV file. Each row is processed once.
+
 *Space Complexity*: O(m), where m is the number of unique cities (since only city totals are stored in memory, not all rows).

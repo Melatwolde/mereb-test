@@ -51,3 +51,7 @@ Estimated Big O Complexity
 *Time Complexity*: O(n), where n is the number of rows in the CSV file. Each row is processed once.
 
 *Space Complexity*: O(m), where m is the number of unique cities (since only city totals are stored in memory, not all rows).
+
+
+![image](https://github.com/user-attachments/assets/9f4a73b6-8ad6-4a79-af09-39718eb344bc)
+
